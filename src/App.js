@@ -66,7 +66,7 @@ class App extends React.PureComponent {
           <h1 className="App__header__title">Управление карточками</h1>
         </header>
         <form className="App__form" onSubmit={this.onSubmit}>
-          <input placeholder="HEX значение" value={this.state.color} onChange={this.onChange} title="23"/>
+          <input placeholder="HEX значение" value={this.state.color} onChange={this.onChange}/>
           <button>Добавить</button>
         </form>
         <Cards items={this.state.items} removeCard={this.removeCard} setFavorite={this.setFavorite}/>
