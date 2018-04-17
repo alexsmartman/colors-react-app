@@ -34,10 +34,10 @@ class App extends React.PureComponent {
     const color = this.state.color;
     const item = {'id': shortid.generate(), 'color': color, 'favorite': false};
     color && this.setState({
-      items: [...this.state.items, item],
+      items: [item, ...this.state.items],
       color: '',
     })
-    color && localStorage.setItem('items', JSON.stringify([...this.state.items, item]));
+    color && localStorage.setItem('items', JSON.stringify([item, ...this.state.items]));
   }
 
   removeCard = (item, i) => {
